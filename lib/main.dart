@@ -24,9 +24,11 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MyAppBar(),
-      body: Container(
+      body: SingleChildScrollView(
         child: Column(
-          children: [],
+          children: [
+            SearchSection(),
+          ]
         )
       )
       );
@@ -60,6 +62,30 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
         ),
       ],
       backgroundColor: Colors.white,
+    );
+  }
+}
+
+
+class SearchSection extends StatelessWidget {
+  
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.blue,
+      height: 200
+    );
+  }
+}
+
+
+class HotelSection extends StatelessWidget {
+  
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.blue,
+      height: 200
     );
   }
 }
